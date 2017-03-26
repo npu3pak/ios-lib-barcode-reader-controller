@@ -5,9 +5,44 @@
 [![License](https://img.shields.io/cocoapods/l/BarcodeReaderController.svg?style=flat)](http://cocoapods.org/pods/BarcodeReaderController)
 [![Platform](https://img.shields.io/cocoapods/p/BarcodeReaderController.svg?style=flat)](http://cocoapods.org/pods/BarcodeReaderController)
 
-## Example
+## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+# Add camera usage description into info.plist
+```xml
+	<key>NSCameraUsageDescription</key>
+	<string>Camera access is required by barcode scanner</string>
+```
+# Create subclass of BarcodeReaderController
+
+```swift
+import UIKit
+import BarcodeReaderController
+
+class ViewController: BarcodeReaderController, BarcodeReaderControllerDelegate {
+    
+    @IBOutlet var errorLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        delegate = self
+    }
+    
+    func onBarcodeDetected(_ value: String, format: BarcodeFormat) {
+        let alert = UIAlertController(title: "\(format)", message: value, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "retry", style: .default, handler: {_ in self.restartScan()}))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func onBarcodeReaderInitializationSuccess() {
+        errorLabel.isHidden = true
+    }
+    
+    func onBarcodeReaderInitializationFailed() {
+        errorLabel.isHidden = false
+    }
+}
+```
+
 
 ## Requirements
 
