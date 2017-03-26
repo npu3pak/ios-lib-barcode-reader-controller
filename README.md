@@ -17,7 +17,7 @@ BarcodeReaderController is available through [CocoaPods](http://cocoapods.org). 
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "BarcodeReaderController"
+pod "BarcodeReaderController", :git => 'https://github.com/npu3pak/ios-lib-barcode-reader-controller.git'
 ```
 
 ## Author
