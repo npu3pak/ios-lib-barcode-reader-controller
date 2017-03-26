@@ -29,8 +29,8 @@
 
 /* Begin PBXFileReference section */
 		09CAFDD0E74AB92FA48EBEA3 /* Pods-BarcodeReaderController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeReaderController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarcodeReaderController_Example/Pods-BarcodeReaderController_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		0F5F0AD67484BAFE13E2855D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		2A629C89CDA1EABF8E809726 /* BarcodeReaderController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BarcodeReaderController.podspec; path = ../BarcodeReaderController.podspec; sourceTree = "<group>"; };
+		0F5F0AD67484BAFE13E2855D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2A629C89CDA1EABF8E809726 /* BarcodeReaderController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BarcodeReaderController.podspec; path = ../BarcodeReaderController.podspec; sourceTree = "<group>"; };
 		316F3A1530FA8BE90D132A9D /* Pods-BarcodeReaderController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeReaderController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarcodeReaderController_Tests/Pods-BarcodeReaderController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BarcodeReaderController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeReaderController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		686DFCCE8464B7467ADFAED8 /* Pods_BarcodeReaderController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarcodeReaderController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81A1CB92B948FEDD6B1C692 /* Pods_BarcodeReaderController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarcodeReaderController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E74DAA9177A58B32205C6ADF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E74DAA9177A58B32205C6ADF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F0F02AD62C2E507C32DF9E2C /* Pods-BarcodeReaderController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeReaderController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarcodeReaderController_Tests/Pods-BarcodeReaderController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7D5FC634D992E6E43E1922E /* Pods-BarcodeReaderController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeReaderController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarcodeReaderController_Example/Pods-BarcodeReaderController_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,9 +216,11 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = M8NLKHKFZX;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -496,10 +498,12 @@
 			baseConfigurationReference = 09CAFDD0E74AB92FA48EBEA3 /* Pods-BarcodeReaderController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BarcodeReaderController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.BarcodeReaderController-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -510,10 +514,12 @@
 			baseConfigurationReference = F7D5FC634D992E6E43E1922E /* Pods-BarcodeReaderController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BarcodeReaderController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.BarcodeReaderController-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -523,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F0F02AD62C2E507C32DF9E2C /* Pods-BarcodeReaderController_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = M8NLKHKFZX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -543,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 316F3A1530FA8BE90D132A9D /* Pods-BarcodeReaderController_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = M8NLKHKFZX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

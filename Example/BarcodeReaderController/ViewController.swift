@@ -7,18 +7,29 @@
 //
 
 import UIKit
+import BarcodeReaderController
 
-class ViewController: UIViewController {
-
+class ViewController: BarcodeReaderController, BarcodeReaderControllerDelegate {
+    
+    @IBOutlet var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func onBarcodeDetected(_ value: String, format: BarcodeFormat) {
+        let alert = UIAlertController(title: "\(format)", message: value, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "retry", style: .default, handler: {_ in self.restartScan()}))
+        present(alert, animated: true, completion: nil)
     }
-
+    
+    func onBarcodeReaderInitializationSuccess() {
+        errorLabel.isHidden = true
+    }
+    
+    func onBarcodeReaderInitializationFailed() {
+        errorLabel.isHidden = false
+    }
 }
 
