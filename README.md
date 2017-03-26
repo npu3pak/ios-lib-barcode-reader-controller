@@ -14,6 +14,8 @@
 ```
 ### Create subclass of BarcodeReaderController
 
+Scanning will stop after barcode detection. If you need to start again call restartScan()
+
 ```swift
 import UIKit
 import BarcodeReaderController
