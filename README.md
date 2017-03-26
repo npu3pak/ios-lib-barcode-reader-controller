@@ -9,8 +9,8 @@
 
 ### Add camera usage description into info.plist
 ```xml
-	<key>NSCameraUsageDescription</key>
-	<string>Camera access is required by barcode scanner</string>
+<key>NSCameraUsageDescription</key>
+<string>Camera access is required by barcode scanner</string>
 ```
 ### Create subclass of BarcodeReaderController
 
