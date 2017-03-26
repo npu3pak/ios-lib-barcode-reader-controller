@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BarcodeReaderController_Example' do
+  pod 'BarcodeReaderController', :path => '../'
+
+  target 'BarcodeReaderController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
